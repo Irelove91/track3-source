@@ -84,8 +84,8 @@ WP=np.array([
  (50,17,1.6),(62,22,3.4),(70,26,7.5),
  (71.8,26.4,7.65),(72.2,27.6,7.65),(73.4,27.8,7.65),(74.2,26.9,7.65),(73.8,25.7,7.65),(72.6,25.5,7.65),  # 10a tight 360 through the TOP hole
  (71.8,26.4,4.65),(72.2,27.6,4.65),(73.4,27.8,4.65),(74.2,26.9,4.65),(73.8,25.7,4.65),(72.6,25.5,4.65),  # 10b tight 360 through the MIDDLE hole — identical radius/shape to 10a
- (72.6,25.5,1.65),(72.6,25.5,0.3),   # 10c BOTTOM hole — straight vertical drop through the opening (same x,y as the loop above, no lateral drift)
- (69,21,0.5),
+ (71.8,26.4,1.65),(72.2,27.6,1.65),(73.4,27.8,1.65),(74.2,26.9,1.65),(73.8,25.7,1.65),(72.6,25.5,1.65),  # 10c SAME tight 360 as 10a/10b through the BOTTOM hole
+ (71.4,25.3,1.15),(70.0,25.0,0.5),   # ...but instead of curving back to close the loop, keep the SAME per-step (dx,dy) as the loop and just ease z down — straight exit tangent, no vertical drop
  (66,17,0.8),(61,15,0.4),
 ])
 def cr(P,n=16):
