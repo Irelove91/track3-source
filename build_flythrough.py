@@ -42,7 +42,7 @@ LAB=[(0,"Launch off the H"),(3,"360 the red marker  ·  CCW"),(11,"Up and over t
      (18,"Down between the wall & the pillar"),(21,"360 the green marker  ·  CW"),
      (28,"Back toward the red marker"),(31,"Duck UNDER the bridge"),
      (36,"Thread the hoop  ·  top → down"),(40,"Across to the ladder gate"),
-     (42,"Weave the ladder  ·  top → bottom"),(59,"Finish — back through the H")]
+     (42,"Weave the ladder  ·  top → bottom"),(55,"Finish — back through the H")]
 def label_for(i):
     wp=i/16.; cur=LAB[0][1]
     for k,s in LAB:
