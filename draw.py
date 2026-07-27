@@ -84,7 +84,10 @@ WP=np.array([
  (38.5,20.5),(38.5,23.5),(41.5,24.5),(44,22.5),              # 9 TIGHT loop to the left, over the top
  (44.5,20),(44,17),                                          #   through the hoop TOP -> DOWN (tight)
  (50,17),(62,22),(70,26),                                    #   then across to the ladder
- (72,26.3),(74,24.8),(71.5,23.8),(74,22.3),(71.5,20.8),      # 10 ladder CW top -> bottom (matches gate brought down 15%)
+ (71.7,26.6),(72.2,27.8),(73.5,28.0),(74.3,27.0),(73.8,25.8),(72.6,25.6),   # 10a top hole — circle, matches 3D
+ (71.7,23.6),(72.2,24.8),(73.5,25.0),(74.3,24.0),(73.8,22.8),(72.6,22.6),   # 10b middle hole — circle, matches 3D
+ (71.7,20.6),(72.2,21.8),(73.5,22.0),(74.3,21.0),(73.8,19.8),(72.6,19.6),   # 10c bottom hole — circle, matches 3D
+ (71.3,19.4),(70.0,19.2),                                                  #   then straight out on the exit tangent, matches 3D
  (66,17),(61,15),                                            #   out, through H = finish
 ])
 def cr(P,n=22):
