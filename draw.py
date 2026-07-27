@@ -55,16 +55,18 @@ T(RP[0]+3.6,RP[1]-2.4,"(360° then left)",MUT,9,ha="left",wt="normal")
 HP=(44,19)
 ax.add_patch(Circle(HP,2.2,fill=False,edgecolor=CYAN,lw=3,zorder=4)); T(48,19.5,"HOOP",CYAN,10,ha="left")
 
-# ---- ladder gate (4 bars = 3 equal holes: top/middle/bottom), far right — turned 90°, closed top only (like "n"), sized to fit in frame ----
+# ---- ladder gate (4 rungs = 3 equal holes: top/middle/bottom), far right — upright like a real ladder: 2 full legs + 4 horizontal rungs ----
 lx,ly=73,23.8
-for dx in (3.0,1.0,-1.0,-3.0): ax.plot([lx+dx,lx+dx],[ly-2.7,ly+2.7],color=ACC,lw=2.2,zorder=6)
-ax.plot([lx-3.8,lx+3.8],[ly+2.7,ly+2.7],color=ACC,lw=2.6,zorder=6)
-for i,s in enumerate(("top","middle","bottom")): T(lx+4.4,ly+1.4-i*1.4,s,ACC,9,ha="left",wt="normal")
+for dy in (4.5,1.5,-1.5,-4.5): ax.plot([lx-2.7,lx+2.7],[ly+dy,ly+dy],color=ACC,lw=2.2,zorder=6)
+ax.plot([lx-2.7,lx-2.7],[ly-4.5,ly+4.5],color=ACC,lw=2.6,zorder=6)
+ax.plot([lx+2.7,lx+2.7],[ly-4.5,ly+4.5],color=ACC,lw=2.6,zorder=6)
+for i,s in enumerate(("top","middle","bottom")): T(lx+3.4,ly+3.0-i*3.0,s,ACC,9,ha="left",wt="normal")
 T(lx,ly-6,"LADDER GATE",ACC,10)
 
 # ---- H start/finish (brought down; H->2 runs parallel to the bridge) ----
 ax.add_patch(Circle((61,15),2.4,facecolor="#e8843c",edgecolor="#fff",lw=1.5,zorder=6))
-T(61,15,"H","#1a1a1a",15); T(61,19,"START / FINISH",INK,10)
+T(61,15,"H","#1a1a1a",15); T(61,11,"START / FINISH",INK,10)
+pillar(67,12,"pillar")   # between the bridge and the ladder gate, right of the START/FINISH text
 
 # ---- racing line ----
 WP=np.array([
@@ -102,7 +104,7 @@ for i in range(10,len(sm)-14,40):
 
 # ---- step badges ----
 B=[(1,64,17),(3,49,24),(4,22,44),(6,18.6,20),
-   (8,49,5.5),(9,35,24),(10,75.4,26.6)]
+   (8,49,5.5),(9,35,24),(10,74.5,29.5)]
 for n,bx2,by2 in B:
     fc = GRN if n==9 else ACC
     tc = "#08281a" if n==9 else "#fff"      # marker 9 is green

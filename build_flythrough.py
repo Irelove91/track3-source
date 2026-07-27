@@ -23,10 +23,18 @@ WUP=np.array([0,0,1.]); light=np.array([0.4,-0.6,0.9]); light/=np.linalg.norm(li
 def nz(v): return v/(np.linalg.norm(v)+1e-9)
 BACK,UP,AHEAD,NEAR=3.4,1.7,6.0,0.25
 
+_last_r=[np.array([1.,0.,0.])]
 def cam_at(i):
     p=line[i]; a=max(i-3,0); b=min(i+3,len(line)-1); t=nz(line[b]-line[a])
     cam=p-t*BACK+WUP*UP; tgt=p+t*AHEAD+WUP*0.4
-    f=nz(tgt-cam); r=nz(np.cross(f,WUP)); u=np.cross(r,f)
+    f=nz(tgt-cam)
+    raw_r=np.cross(f,WUP)
+    if np.linalg.norm(raw_r)<0.15:   # flight direction too close to vertical (WUP) — cross(f,WUP) degenerates and the camera roll flips upside down
+        r=nz(_last_r[0]-f*np.dot(_last_r[0],f))   # hold the previous right-vector, re-orthogonalized against the new forward, instead of flipping
+    else:
+        r=nz(raw_r)
+    _last_r[0]=r
+    u=np.cross(r,f)
     return cam,np.array([r,u,f])
 
 LAB=[(0,"Launch off the H"),(3,"360 the red marker  ·  CCW"),(11,"Up and over the bridge"),
@@ -34,7 +42,7 @@ LAB=[(0,"Launch off the H"),(3,"360 the red marker  ·  CCW"),(11,"Up and over t
      (18,"Down between the wall & the pillar"),(21,"360 the green marker  ·  CW"),
      (28,"Back toward the red marker"),(31,"Duck UNDER the bridge"),
      (36,"Thread the hoop  ·  top → down"),(40,"Across to the ladder gate"),
-     (43,"Weave the ladder  ·  top → bottom"),(48,"Finish — back through the H")]
+     (42,"Weave the ladder  ·  top → bottom"),(59,"Finish — back through the H")]
 def label_for(i):
     wp=i/16.; cur=LAB[0][1]
     for k,s in LAB:

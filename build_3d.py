@@ -81,10 +81,11 @@ WP=np.array([
  (48,14,1.4),(43,17.5,1.9),                                       #   round the pole, then LEFT toward the hoop
  (38.5,20.5,2.2),(38.5,23.5,2.4),(41.5,24.5,2.4),(44,22.5,2.4),   # step 9 STAYS UNDER the bridge deck
  (44.5,20,2.3),(44,17,1.6),                                       #   ducks under, threads the hoop from the top down
- (50,17,1.6),(62,22,3.4),(70,26,7.0),
- (71.6,26.4,9.5),(71.9,27.5,8.3),(72.8,28.0,7.2),(73.8,27.8,6.0),   # 10 ONE fluid clockwise corkscrew, tight around the left leg,
- (74.4,26.9,4.8),(74.2,25.9,3.7),(73.2,25.3,2.5),(72.2,25.5,1.4),   #   sweeping through all 3 holes on the way down — no reversal, no zigzag
- (71.6,26.4,0.2),(69,21,0.5),
+ (50,17,1.6),(62,22,3.4),(70,26,7.5),
+ (71.8,26.4,7.65),(72.2,27.6,7.65),(73.4,27.8,7.65),(74.2,26.9,7.65),(73.8,25.7,7.65),(72.6,25.5,7.65),  # 10a tight 360 through the TOP hole
+ (71.8,26.4,4.65),(72.2,27.6,4.65),(73.4,27.8,4.65),(74.2,26.9,4.65),(73.8,25.7,4.65),(72.6,25.5,4.65),  # 10b tight 360 through the MIDDLE hole — identical radius/shape to 10a
+ (71.8,26.4,1.65),(72.2,27.6,1.65),(73.4,27.8,1.65),(74.2,26.9,1.65),(73.8,25.7,1.65),(72.6,25.5,1.65),  # 10c tight 360 through the BOTTOM hole — identical radius/shape to 10a
+ (71.8,26.4,0.2),(69,21,0.5),
  (66,17,0.8),(61,15,0.4),
 ])
 def cr(P,n=16):
