@@ -84,10 +84,10 @@ WP=np.array([
  (38.5,20.5),(38.5,23.5),(41.5,24.5),(44,22.5),              # 9 TIGHT loop to the left, over the top
  (44.5,20),(44,17),                                          #   through the hoop TOP -> DOWN (tight)
  (50,17),(62,22),(70,26),                                    #   then across to the ladder
- (71.7,26.6),(72.2,27.8),(73.5,28.0),(74.3,27.0),(73.8,25.8),(72.6,25.6),   # 10a top hole — circle, matches 3D
- (71.7,23.6),(72.2,24.8),(73.5,25.0),(74.3,24.0),(73.8,22.8),(72.6,22.6),   # 10b middle hole — circle, matches 3D
- (71.7,20.6),(72.2,21.8),(73.5,22.0),(74.3,21.0),(73.8,19.8),(72.6,19.6),   # 10c bottom hole — circle, matches 3D
- (71.3,19.4),(70.0,19.2),                                                  #   then straight out on the exit tangent, matches 3D
+ (71.7,26.8),(71.3,27.8),(70.3,28.2),(69.3,27.8),(68.9,26.8),(69.3,25.8),(70.3,25.4),(71.3,25.8),(71.7,26.8),   # 10a top hole — CLOSED circle around the LEFT leg
+ (71.7,23.8),(71.3,24.8),(70.3,25.2),(69.3,24.8),(68.9,23.8),(69.3,22.8),(70.3,22.4),(71.3,22.8),(71.7,23.8),   # 10b middle hole — CLOSED circle around the LEFT leg
+ (71.7,20.8),(71.3,21.8),(70.3,22.2),(69.3,21.8),(68.9,20.8),(69.3,19.8),(70.3,19.4),(71.3,19.8),(71.7,20.8),   # 10c bottom hole — CLOSED circle around the LEFT leg
+ (69,19),                                                                    #   then straight out toward the finish
  (66,17),(61,15),                                            #   out, through H = finish
 ])
 def cr(P,n=22):
