@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track 3 — 3D Breakdown</title>
+<style>
+  :root{--bg:#0e0f13;--panel:#15171d;--ink:#e8e8ec;--mut:#9aa0aa;--acc:#b06cff;
+        --red:#ff4d4d;--grn:#39d98a;--yel:#ffd23f;--cyan:#38bdf8;--line:#242731;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:24px}
+  .eyebrow{color:var(--acc);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+  h1{font-size:42px;margin:.12em 0 .1em;font-weight:800}
+  h1 em{color:var(--acc);font-style:normal}
+  h2{font-size:22px;margin:34px 0 6px}
+  .sub{color:var(--mut);max-width:64ch;margin:0 0 10px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:12px}
+  img{width:100%;height:auto;display:block;border-radius:10px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .grid3 .card img{aspect-ratio:3/2;object-fit:contain;background:#0e0f13}
+  .cap{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:8px 2px 2px}
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:110px}
+  .stat .k{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+  .stat .v{font-size:19px;font-weight:700}
+  .ytwrap{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-top:12px}
+  .ytwrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  .files{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:12px;font-size:14px}
+  .files code{color:var(--acc)}
+  .sched{margin-top:8px;border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:11px 6px;border-bottom:1px solid var(--line)}
+  .row .n{width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;
+          display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+  .row.gate .n{background:var(--yel);color:#1a1a1a}
+  .row.hoop .n{background:var(--cyan);color:#08222e}
+  .row.mark .n{background:var(--red)}
+  .row.grn .n{background:var(--grn);color:#08281a}
+  .row h3{margin:0;font-size:15px}.row p{margin:2px 0 0;color:var(--mut);font-size:13px}
+  .tag{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);
+       border:1px solid var(--line);border-radius:5px;padding:1px 5px;margin-left:8px}
+  .note{background:#1a1c22;border:1px solid var(--acc);border-radius:10px;padding:12px 14px;margin-top:12px;font-size:13px}
+  footer{color:var(--mut);font-size:12px;padding:22px 0 44px}
+  @media(max-width:640px){.grid3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">3D breakdown · pilot-verified layout</div>
+  <h1>Track <em>3</em></h1>
+  <p class="sub">A night FPV circuit the local racers have dubbed <b>&ldquo;Eagle&rsquo;s Nest&rdquo;</b> —
+     a futuristic, dystopian racetrack coiled deep in the concrete aerie, where broken neon and raw
+     structure become the line. It demands the very instincts that crown the eagle king of the sky:
+     the <b>vision</b> to read a gap no one else can see, the <b>precision</b> to fold into a
+     full-throttle dive and thread a gate dead-center, and the <b>fearless nerve</b> to hold power
+     through the dark where lesser pilots peel off. Talons out — only the sharpest hold the top of
+     this nest.</p>
+  <p class="sub" style="font-size:13px">Below: the uploaded run, the top-down plan, a 3D model with
+     the flight path at altitude, a chase-cam fly-through, and the full lap-1 route.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <h2>Plan view</h2>
+  <p class="sub">Top-down, north up. Purple ribbon is the racing line for lap 1.</p>
+  <div class="card"><img src="track3-plan.png" alt="Top-down plan of Track 3"></div>
+
+  <h2>Watch</h2>
+  <p class="sub">The uploaded run on YouTube.</p>
+  <div class="ytwrap">
+    <iframe src="https://www.youtube.com/embed/pL5xMM5hNmg" title="Track 3 — YouTube run"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+  </div>
+
+  <h2>3D model</h2>
+  <p class="sub">Same course in 3D — the flight path climbs to fly <b>over the bridge</b>,
+     drops <b>through the hoop</b> at the bridge's bottom edge, and weaves the <b>ladder gate</b>
+     top-to-bottom. Height is exaggerated to make the altitude changes readable.</p>
+  <div class="card">
+    <img src="track3-3d-iso.png" alt="Isometric 3D view">
+    <div class="cap">Isometric</div>
+  </div>
+  <div class="grid3" style="margin-top:12px">
+    <div class="card"><img src="track3-3d-front.png" alt="Front elevation"><div class="cap">Front — altitude profile</div></div>
+    <div class="card"><img src="track3-3d-top.png" alt="Top view"><div class="cap">Top</div></div>
+  </div>
+  <div class="files">
+    <b>Interactive model:</b> <code>track3.glb</code> — double-click to open in macOS Quick Look
+    (drag to orbit, scroll to zoom), or drop into Blender / Fusion / Unreal.
+    Also written: <code>track3.obj</code> (+ materials), <code>track3-plan.png</code>.
+    All on your Desktop in <b>track3-map</b>.
+  </div>
+
+  <h2>Fly-through</h2>
+  <p class="sub">Chase-cam along the racing line — launch off the H, both 360s, up and over
+     the bridge, down through the hoop, and the ladder gate to the finish. Step callouts up top.</p>
+  <div class="card">
+    <video src="track3-flythrough.mp4" controls autoplay muted loop playsinline
+           style="width:100%;border-radius:10px;display:block"></video>
+  </div>
+
+  <h2>Lap 1 — route</h2>
+  <div class="sched" id="sched"></div>
+
+  <div class="note" id="lapnote">
+    <b>Ladder gate:</b> lap 1 — weave <b>clockwise, top → bottom</b>.
+    Lap 2 — <b>counter-clockwise, bottom → top</b>. Each lap finishes back through the <b>H</b>.
+  </div>
+
+  <footer>
+    Built from the pilot's hand maps (IMG_5960–5965) and called route, cross-checked against
+    <span style="font-family:ui-monospace,monospace">track3-view.mov</span> and
+    <span style="font-family:ui-monospace,monospace">track3&nbsp;lap&nbsp;example.mov</span>
+    (craft &ldquo;DARK SHEPARD II&rdquo;). Coordinates in metres, +X east, +Y north, +Z up.
+  </footer>
+</div>
+
+<script>
+document.getElementById("stats").innerHTML=[
+ ["Gates","3 + H"],["Markers","red · green"],["Flags",3],
+ ["360s","2 (marker 2 CCW, 7 CW)"],["Laps","2 (ladder alternates)"]
+].map(([k,v])=>`<div class="stat"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+
+const STEPS=[
+ ["gate","START — “H” pad","Launch off the H. Fly straight out, passing the red marker slightly on the right."],
+ ["mark","Red marker — full 360 (CCW)","A full counter-clockwise 360 around the red marker, then break left."],
+ ["","Over the bridge","Climb up and over the bridge deck, curving naturally toward marker 4."],
+ ["","Top — past the bushes","Along the top edge under the bushes line."],
+ ["gate","Gemfan / cube gate","Left through the checkered cube gate, tucked between the wall and the pillar."],
+ ["","Down past the pillar","Straight down the gap between the wall and the pillar."],
+ ["grn","Green marker — full 360 (CW)","A full clockwise 360 around the green-marker pole."],
+ ["mark","Back to the red marker","Across the bottom, back to the red-marker pillar."],
+ ["hoop","Hoop — down through the top","Loop to the left of the hoop, up and over, then drop through it from the top down. The hoop hangs on the bridge's bottom edge, right above the red marker."],
+ ["gate","Ladder gate","Across to the ladder. Lap 1: weave clockwise, top → bottom."],
+ ["gate","Finish — through the H","Back across to cross the H and close the lap."],
+];
+const sched=document.getElementById("sched");
+STEPS.forEach((s,i)=>{const r=document.createElement("div");r.className="row "+s[0];
+  r.innerHTML=`<div class="n">${i+1}</div><div><h3>${s[1]}${s[0]?`<span class="tag">${s[0]}</span>`:""}</h3><p>${s[2]}</p></div>`;
+  sched.append(r);});
+</script>
+</body>
+</html>
