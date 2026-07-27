@@ -84,7 +84,7 @@ WP=np.array([
  (50,17,1.6),(62,22,3.4),(70,26,7.5),
  (71.8,26.4,7.65),(72.2,27.6,7.65),(73.4,27.8,7.65),(74.2,26.9,7.65),(73.8,25.7,7.65),(72.6,25.5,7.65),  # 10a tight 360 through the TOP hole
  (71.8,26.4,4.65),(72.2,27.6,4.65),(73.4,27.8,4.65),(74.2,26.9,4.65),(73.8,25.7,4.65),(72.6,25.5,4.65),  # 10b tight 360 through the MIDDLE hole — identical radius/shape to 10a
- (72.0,25.9,1.65),(70.2,25.9,0.5),   # 10c BOTTOM hole — straight out, no loop
+ (72.6,25.5,1.65),(72.6,25.5,0.3),   # 10c BOTTOM hole — straight vertical drop through the opening (same x,y as the loop above, no lateral drift)
  (69,21,0.5),
  (66,17,0.8),(61,15,0.4),
 ])
